@@ -8,10 +8,10 @@ Question Name :  196. Delete Duplicate Emails
 
 
 with temp1 as (
-    select 
-        id,
-        email,
-        rank() over ( partition by email order by id ) as rn 
+select 
+    id,
+    email,
+    rank() over ( partition by email order by id ) as rn 
     from person 
 )
 delete from person 

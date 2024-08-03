@@ -6,7 +6,10 @@ Question Name :  180. Consecutive Numbers
 */
 
 
-select distinct l1.num as ConsecutiveNums
+select distinct 
+    l1.num as ConsecutiveNums
 from logs l1 , logs l2 , logs l3
-where l1.id = l2.id-1 and l2.id = l3.id-1
-and l1.num = l2.num and l1.num = l3.num;
+where l1.id = l2.id-1 
+and l2.id = l3.id-1
+and l1.num = l2.num 
+and l1.num = l3.num;
